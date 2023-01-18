@@ -11,11 +11,14 @@
     "build": "yarn build-available-flags && yarn build-next",
     "start": "NODE_ENV=production node server",
     "lint": "xo",
-    "heroku-postbuild": "yarn build"
+    "heroku-postbuild": "yarn build",
+    "predev": "only-include-used-icons",
+    "prebuild": "only-include-used-icons"
   },
   "dependencies": {
     "@babel/runtime": "^7.20.7",
     "@ban-team/validateur-bal": "^2.11.0",
+    "@codegouvfr/react-dsfr": "^0.25.4",
     "@turf/bbox-polygon": "^6.5.0",
     "@turf/boolean-contains": "^6.5.0",
     "babel-plugin-lodash": "^3.3.4",
@@ -55,6 +58,7 @@
     "@next/bundle-analyzer": "^13.1.2",
     "eslint": "^7.32.0",
     "eslint-config-xo-nextjs": "^3.2.0",
+    "next-transpile-modules": "^10.0.0",
     "xo": "^0.39.1"
   },
   "xo": {
