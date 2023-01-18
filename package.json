@@ -13,7 +13,8 @@
     "lint": "xo",
     "heroku-postbuild": "yarn build",
     "predev": "only-include-used-icons",
-    "prebuild": "only-include-used-icons"
+    "prebuild": "only-include-used-icons",
+    "postinstall": "copy-dsfr-to-public"
   },
   "dependencies": {
     "@babel/runtime": "^7.20.7",

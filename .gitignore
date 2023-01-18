@@ -36,3 +36,5 @@ node_modules
 # Reports
 coverage
 reports
+
+/public/dsfr/
