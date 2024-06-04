@@ -27,6 +27,7 @@ app.route('/couverture-stats')
 
 app.route('/couverture-tiles/:z/:x/:y.pbf')
   .get(async (req, res) => {
+    console.log('couverture-tiles')
     const y = Number.parseInt(req.params.y, 10)
     const x = Number.parseInt(req.params.x, 10)
     const z = Number.parseInt(req.params.z, 10)
