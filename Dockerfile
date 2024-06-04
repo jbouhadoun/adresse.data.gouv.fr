@@ -13,6 +13,8 @@ FROM node:18.19-alpine3.18
 
 WORKDIR /app
 
+RUN apk add --no-cache curl 
+
 COPY --from=builder /app/package.json ./
 COPY --from=builder /app/yarn.lock ./
 COPY --from=builder /app/next.config.js ./
