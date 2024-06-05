@@ -5,7 +5,7 @@
   "description": "Le site officiel de l’Adresse",
   "license": "MIT",
   "scripts": {
-    "dev": "node --max-old-space-size=4096 server",
+    "dev": "node server",
     "build-next": "next build",
     "build-available-flags": "node scripts/build-available-flags",
     "build": "yarn build-available-flags && yarn build-next",
