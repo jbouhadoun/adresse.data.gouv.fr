@@ -10,7 +10,7 @@ RUN yarn install
 # copying the root folder into the workdir
 COPY . .
 
-RUN chown -R node:node /
+RUN chown -R node:node /app
 USER node
 
 CMD ["sh", "start.sh"]
