@@ -28,7 +28,8 @@ COPY --from=builder /app/scripts/ ./scripts
 RUN chown -R node:node /app 
 
 USER node
+ENV YARN_CACHE_FOLDER=/cache/next
 
 EXPOSE 3000
 
-CMD ["sh", "-c", "yarn build-available-flags && yarn start"]
+CMD ["sh", "-c", "yarn --cache-folder $YARN_CACHE_FOLDER build-available-flags && yarn  --cache-folder $YARN_CACHE_FOLDER start"]
