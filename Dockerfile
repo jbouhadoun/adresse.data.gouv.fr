@@ -8,7 +8,7 @@ RUN mkdir public
 RUN yarn --cache-folder $YARN_CACHE_FOLDER
 
 COPY . .
-RUN yarn build --cache-folder $YARN_CACHE_FOLDER
+RUN yarn build
 
 FROM node:18.19-alpine3.18
 
@@ -33,4 +33,4 @@ ENV YARN_CACHE_FOLDER=/cache/next
 
 EXPOSE 3000
 
-CMD ["sh", "-c", "yarn --cache-folder $YARN_CACHE_FOLDER build-available-flags && yarn  --cache-folder $YARN_CACHE_FOLDER start"]
+CMD ["sh", "-c", "yarn build-available-flags && yarn start"]
