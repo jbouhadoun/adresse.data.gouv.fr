@@ -1,13 +1,14 @@
 FROM node:18.19-alpine3.18 as builder
 
 WORKDIR /app
+ENV YARN_CACHE_FOLDER=/cache/next
 
 COPY package.json yarn.lock .
 RUN mkdir public
-RUN yarn
+RUN yarn --cache-folder $YARN_CACHE_FOLDER
 
 COPY . .
-RUN yarn build
+RUN yarn build --cache-folder $YARN_CACHE_FOLDER
 
 FROM node:18.19-alpine3.18
 
