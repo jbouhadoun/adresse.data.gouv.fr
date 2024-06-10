@@ -2,6 +2,7 @@ FROM node:18.19-alpine3.18 as builder
 
 WORKDIR /app
 COPY package.json yarn.lock .
+ENV YARN_LOG_DIR=/tmp
 
 RUN mkdir public
 RUN yarn
