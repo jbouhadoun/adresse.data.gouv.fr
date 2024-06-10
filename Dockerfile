@@ -26,10 +26,9 @@ COPY --from=builder /app/server ./server
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/scripts/ ./scripts
 
-RUN chown -R node:node /app 
-
+#RUN chown -R node:node /app 
+RUN yarn build-available-flags
 USER node
-
 EXPOSE 3000
 
-CMD ["sh", "-c", "yarn build-available-flags && yarn start"]
+CMD ["sh", "-c", "yarn start"]
