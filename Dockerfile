@@ -31,4 +31,5 @@ RUN yarn build-available-flags
 USER node
 EXPOSE 3000
 
+
 CMD ["sh", "-c", "yarn start"]
