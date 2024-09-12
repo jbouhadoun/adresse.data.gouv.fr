@@ -21,8 +21,10 @@
   "dependencies": {
     "@codegouvfr/react-dsfr": "^1.10.11",
     "@types/remark-heading-id": "^1.0.0",
+    "config": "^1.31.0",
     "gray-matter": "^4.0.3",
     "next": "14.2.5",
+    "next-config": "^0.1.0",
     "react": "^18",
     "react-dom": "^18",
     "remark": "^15.0.1",

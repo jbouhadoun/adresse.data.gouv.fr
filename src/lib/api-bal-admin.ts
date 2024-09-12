@@ -2,6 +2,7 @@ import { CandidatePartenaireDeLaCharteType, PartenaireDeLaCharteTypeEnum, Parten
 import { customFetch } from './fetch'
 import { EventType } from '@/types/events.types'
 
+
 if (!process.env.NEXT_PUBLIC_BAL_ADMIN_API_URL) {
   throw new Error('NEXT_PUBLIC_BAL_ADMIN_API_URL is not defined in the environment')
 }
