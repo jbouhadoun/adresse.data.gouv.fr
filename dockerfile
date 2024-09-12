@@ -11,8 +11,7 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build
-
+RUN export $(cat .env.default | xargs) && npm run build
 # Étape 2 : Image de production
 FROM node:20.15.1
 
