@@ -9,9 +9,12 @@ COPY package.json package-lock.json ./
 # Installer les dépendances
 RUN npm install
 
+# Copier tout le code source et le fichier .env.default
 COPY . .
+COPY .env.default .env.default
 
-RUN export $(cat .env.default | xargs) && npm run build
+# Charger les variables d'environnement et construire l'application
+RUN export $(grep -v '^#' .env.default | xargs) && npm run build
 # Étape 2 : Image de production
 FROM node:20.15.1
 
