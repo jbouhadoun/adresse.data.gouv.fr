@@ -42,3 +42,5 @@ next-env.d.ts
 public/dsfr
 
 .vscode/
+
+docker-compose_prod.yml

@@ -3,12 +3,14 @@ import Link from 'next/link'
 import { getPosts } from '@/lib/blog'
 
 import { AsideLinkList, AsideFollowList } from './AsideContent.styled'
+import getConfig from 'next/config'
 
+const { publicRuntimeConfig } = getConfig()
 const {
   NEXT_PUBLIC_SOCIAL_NETWORKS_URL_XCOM: SOCIAL_NETWORKS_URL_XCOM,
   NEXT_PUBLIC_SOCIAL_NETWORKS_URL_FACEBOOK: SOCIAL_NETWORKS_URL_FACEBOOK,
   NEXT_PUBLIC_SOCIAL_NETWORKS_URL_LINKEDIN: SOCIAL_NETWORKS_URL_LINKEDIN,
-} = process.env
+} = publicRuntimeConfig
 const NB_HIGHLIGHTED_POSTS = 3
 
 async function AsideContent() {
