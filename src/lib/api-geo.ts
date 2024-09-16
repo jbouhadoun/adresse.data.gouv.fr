@@ -4,7 +4,7 @@ import { customFetch } from './fetch'
 import getConfig from 'next/config'
 
 const { publicRuntimeConfig } = getConfig()
-if (!publicRuntimeConfig.NEXT_PUBLIC_API_GEO_URL) {
+if (!process.env.NEXT_PUBLIC_API_GEO_URL) {
   throw new Error('NEXT_PUBLIC_API_GEO_URL is not defined')
 }
 
