@@ -7,8 +7,9 @@ import html from 'remark-html'
 import matter from 'gray-matter'
 import getConfig from 'next/config'
 
-const { NEXT_PUBLIC_ADRESSE_URL } = process.env
-const { NODE_ENV } = process.env
+// Récupérer les variables d'environnement avec getConfig
+const { publicRuntimeConfig } = getConfig()
+const { NEXT_PUBLIC_ADRESSE_URL, NODE_ENV } = publicRuntimeConfig
 
 // fix unknown property on matter.GrayMatterFile
 // https://github.com/jonschlinkert/gray-matter/issues/160
