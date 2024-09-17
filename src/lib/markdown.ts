@@ -8,8 +8,8 @@ import matter from 'gray-matter'
 import getConfig from 'next/config'
 
 // Récupérer les variables d'environnement avec getConfig
-const { publicRuntimeConfig } = getConfig()
-const { NEXT_PUBLIC_ADRESSE_URL, NODE_ENV } = publicRuntimeConfig
+// const { publicRuntimeConfig } = getConfig()
+const { NEXT_PUBLIC_ADRESSE_URL, NODE_ENV } = process.env
 
 // fix unknown property on matter.GrayMatterFile
 // https://github.com/jonschlinkert/gray-matter/issues/160
